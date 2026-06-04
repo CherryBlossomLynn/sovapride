@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --page-bg: #e6b0ba;
+  --card-bg: #ffffffd9;
+  --text-dark: #262223;
+  --heading-dark: #1a0f13;
+  --max-width: 1200px;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 0%, #ffffff4d 0%, #ffffff00 32%),
+    radial-gradient(circle at 92% 84%, #ffffff40 0%, #ffffff00 35%),
+    var(--page-bg);
+  color: var(--text-dark);
+  font-family: "Century Gothic", "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  background: var(--page-bg);
+}
+
+.hero-image {
+  width: 100%;
+  max-width: var(--max-width);
+  height: auto;
+  display: block;
+}
+
+main {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: 36px 20px 56px;
+}
+
+.content-section {
+  position: relative;
+  background: var(--card-bg);
+  border: 2px solid #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 24px #a26f7e33;
+  animation: rise-in 600ms ease both;
+}
+
+.content-section h2 {
+  font-family: "Arial Black", "Impact", "Franklin Gothic Heavy", sans-serif;
+  color: var(--heading-dark);
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.rainbow-divider {
+  height: 8px;
+  width: min(270px, 100%);
+  border-radius: 999px;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, #ff3750 0%, #ff8422 20%, #e0c161 40%, #54b56e 60%, #6fb3d1 80%, #9a66c6 100%);
+}
+
+.content-section p {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  letter-spacing: 0.01em;
+}
+
+.announcement p {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.details p + p {
+  margin-top: 14px;
+}
+
+.details {
+  animation-delay: 120ms;
+}
+
+.parking {
+  animation-delay: 220ms;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 24px 14px 36px;
+  }
+
+  .content-section {
+    border-radius: 14px;
+    padding: 18px;
+  }
+
+  .rainbow-divider {
+    height: 7px;
+  }
+}
