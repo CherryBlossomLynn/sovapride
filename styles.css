@@ -23,11 +23,13 @@ body {
   display: flex;
   justify-content: center;
   background: var(--page-bg);
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: none;
   height: auto;
   display: block;
 }
