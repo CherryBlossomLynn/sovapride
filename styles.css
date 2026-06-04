@@ -177,6 +177,22 @@ main {
   animation-delay: 220ms;
 }
 
+.bottom-image {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto 18px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.bottom-image-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
